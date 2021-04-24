@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import NewUser from "./components/NewUser/NewUser";
 import UserList from "./components/UserList/UserList";
 // import Modal from "./components/UI/Modal";
@@ -18,11 +18,11 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <NewUser onAddUser={addUserHandler} />
       <UserList users={enteredUsers} />
       {/* <Modal /> */}
-    </div>
+    </>
   );
 }
 
