@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewUser from "./components/NewUser/NewUser";
 import UserList from "./components/UserList/UserList";
+// import Modal from "./components/UI/Modal";
 
 function App() {
   const [enteredUsers, setNewUser] = useState([]);
@@ -20,6 +21,7 @@ function App() {
     <div>
       <NewUser onAddUser={addUserHandler} />
       <UserList users={enteredUsers} />
+      {/* <Modal /> */}
     </div>
   );
 }

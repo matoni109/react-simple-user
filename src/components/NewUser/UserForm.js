@@ -27,17 +27,15 @@ const UserForm = (props) => {
       age: +enteredAge,
     };
 
-    // console.log(userData);
-    //
-    // execute the fuction from the parent !!
-    //
-    //
-    // onAddExpese from Newuser.JS
-    // sends state up to Newuser
-    props.onSaveUserData(userData);
-    setEnteredTitle("");
-    setAge("");
-    //   setEnteredDate("");
+    // alert("yay");
+    if (userData.age >= 0 && userData.title != "") {
+      // user is NOT empty
+      props.onSaveUserData(userData);
+      setEnteredTitle("");
+      setAge("");
+    } else {
+      alert("Pleaes Fill out the Values !!");
+    }
   };
 
   return (
