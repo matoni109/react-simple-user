@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Button from "../UI/Button";
 import "./UserForm.css";
 //
 const UserForm = (props) => {
@@ -34,7 +34,7 @@ const UserForm = (props) => {
     //
     // onAddExpese from Newuser.JS
     // sends state up to Newuser
-    props.onSaveuserData(userData);
+    props.onSaveUserData(userData);
     setEnteredTitle("");
     setAge("");
     //   setEnteredDate("");
@@ -55,7 +55,7 @@ const UserForm = (props) => {
           <label>Age (Years)</label>
           <input
             type="number"
-            value={enteredName}
+            value={enteredAge}
             min="0"
             step="1"
             onChange={ageChangedHandler}
@@ -63,7 +63,8 @@ const UserForm = (props) => {
         </div>
       </div>
       <div className="new-user__actions">
-        <button type="submit">Add user</button>
+        {/* <button type="submit">Add user</button> */}
+        <Button onClick={submitHandler} />
       </div>
     </form>
   );
