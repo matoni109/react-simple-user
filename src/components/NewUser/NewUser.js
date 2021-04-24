@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../UI/Card";
 import UserForm from "./UserForm";
-import "./NewUser.css";
+import classes from "./NewUser.module.css";
 
 const NewUser = (props) => {
   // save expense object
@@ -17,12 +17,12 @@ const NewUser = (props) => {
     props.onAddUser(userData);
   };
   return (
-    <div>
-      <Card className="new-user">
+    <Card className={classes.newUser}>
+      <div>
         {/* {passes saveExpenseDateHandler to the child element } */}
         <UserForm onSaveUserData={saveUserHandler} />
-      </Card>
-    </div>
+      </div>
+    </Card>
   );
 };
 
